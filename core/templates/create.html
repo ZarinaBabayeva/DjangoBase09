@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block body_content %}
+<h1>Product Create</h1>
+<div style="text-align: center">
+  <form class="form-horizontal" style="margin: 20px auto; width: 400px">
+    <div class="form-group">
+      <label class="control-label" for="product_name">PRODUCT NAME</label>
+      <input
+        id="product_name"
+        name="product_name"
+        placeholder="PRODUCT NAME"
+        class="form-control"
+        required=""
+        type="text"
+      />
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="product_description"
+        >PRODUCT DESCRIPTION</label
+      >
+      <textarea
+        class="form-control"
+        id="product_description"
+        name="product_description"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="price">PRICE</label>
+      <input
+        id="price"
+        name="price"
+        placeholder="PRICE"
+        class="form-control"
+        required=""
+        type="number"
+      />
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="discount_price">DISCOUNT PRICE</label>
+      <input
+        id="discount_price"
+        name="discount_price"
+        placeholder="DISCOUNT PRICE"
+        class="form-control"
+        required=""
+        type="number"
+      />
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="ebutton">BUTTON</label>
+      <div class="col-md-4">
+        <button
+          id="singlebutton"
+          name="button"
+          class="btn btn-primary"
+          style="width: 370px"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

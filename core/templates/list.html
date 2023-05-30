@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block body_content %}
+<h1>
+  Products list
+</h1>
+<ul style = "list-style-type: number;">
+    {% for product in products %}
+    <li>
+      Name: <a href="{% url 'detail' product.id %}">{{ product.name }}</a>
+      <strong style="color:cadetblue">Total price: {{ product.total_price|floatformat:2 }}</strong> 
+      Description: {% if product.description %}
+        {{ product.description }}
+      {% else %}
+        "No description"
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
